@@ -1,0 +1,48 @@
+.navFooterItem{
+	width: 125px;
+	@extend %flex-column;
+	margin-right: 10px;
+}
+
+.navFooterItem h5{
+	margin-bottom: 7px;
+	color: $additional-text-color;
+}
+
+.navFooterItem a{
+	margin-bottom: 2px;
+}
+
+.footerForm{
+	position: relative;
+}
+
+.footerForm input{
+	width: 236px;
+	border-radius: 50px;
+	@include font-size($rare-text-size, $rare-line-height, $additional-font-weight);
+	padding: 6px 95px 6px 12px;
+}
+
+.footerForm button{
+	position: absolute;
+	right: 0px;
+	width: 89px;
+	@include font-size($rare-text-size, $rare-line-height, $additional-font-weight);
+	cursor: pointer;
+	padding: 4.5px 0;
+	box-shadow: none;
+}
+
+.footerForm .pinkButton:hover{
+	@include border($additional-border-weight, $primary-color-button);
+}
+
+.wrapperSocialNetworkFooter{
+	@extend %flex-center;
+}
+
+.wrapperSocialNetworkFooter ul{
+	@extend %flex-center;
+	margin-bottom: 15px;
+}

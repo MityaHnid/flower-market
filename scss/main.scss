@@ -1,0 +1,464 @@
+.selectionBouquet{
+	width: 300px;
+	margin: 163px 0 0 0;
+}
+
+.selectionBouquet p{
+	margin: 13px 0 20px;
+}
+
+.whiteButton{
+	background: $primary-color;
+}
+
+.whiteButton a{
+	color: $rare-text-color;
+}
+
+.pinkButton{
+	background: $primary-color-button;
+	box-shadow: 0px 4px 4px $box-shadow-color;
+}
+
+.pinkButton:hover{
+	background: $primary-color-header-footer;
+}
+
+.wrapperRoundaboutBouquet{
+	width: 415px;
+	height: 415px;
+	margin: 30px -65px 30px 0;
+	position: relative;
+	overflow: hidden;
+}
+
+.roundaboutBouquet{
+	width: 454px;
+	height: 454px;
+	position: absolute;
+	top: -23px;
+	left: 95px;
+	border-radius: 50%;
+	@include border($additional-border-weight, $primary-color-header-footer);
+}
+
+.bouquetOne,
+.bouquetTwo,
+.bouquetThree{
+	width: 330px;
+	height: 330px;
+	position: absolute;
+	top: 55px;
+	right: 80px;
+	border-radius: 50%;
+	background-size: cover;
+	background-position: -60px 0px;
+	z-index: 0;
+}
+
+.bouquetOne.active,
+.bouquetTwo.active,
+.bouquetThree.active{
+	width: 330px;
+	height: 330px;
+	position: absolute;
+	top: 55px;
+	right: 80px;
+	border-radius: 50%;
+	background-size: cover;
+	background-position: -60px 0px;
+	z-index: 1;
+}
+
+.bouquetOne{
+	background: url("images/blue and red roses.png") no-repeat;
+}
+
+.bouquetTwo{
+	background: url("images/orange roses.png") no-repeat;
+}
+
+.bouquetThree{
+	background: url("images/violet roses.png") no-repeat;
+}
+
+.smallBouquet .bouquetOne,
+.smallBouquet .bouquetTwo,
+.smallBouquet .bouquetThree{
+	width: 55px;
+	height: 55px;
+	position: absolute;
+	background-size: cover;
+	background-position: -14px 0;
+}
+
+.smallBouquet .bouquetOne{
+	top: 50px;
+	left: -30px;
+}
+
+.smallBouquet .bouquetTwo{
+	top: 200px;
+	left: -80px;	
+}
+
+.smallBouquet .bouquetThree{
+	top: 340px;
+	left: -30px;
+}
+
+.paginationOne,
+.paginationTwo,
+.paginationThree{
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	border-radius: 50%;
+	background: $primary-color-button;
+}
+
+.paginationOne.active,
+.paginationTwo.active,
+.paginationThree.active{
+	transform: scale(1.5);
+}
+
+.paginationOne{
+	top: 80px;
+	left: 43px;
+}
+
+.paginationTwo{
+	top: 222px;
+	left: -6px;
+}
+
+.paginationThree{
+	bottom: 80px;
+	left: 43px;
+}
+
+.assortment{
+	width: 210px;
+	position: relative;
+	margin-bottom: 46px;
+}
+
+.assortmentContent{
+	position: absolute;
+	bottom: 7px;
+	left: 40px;
+	padding: 8px;
+	background: $primary-color-header-footer;
+	box-shadow: 0px 4px 4px $box-shadow-color;
+	border-radius: 0;
+	border: none;
+	z-index: 1;
+	transition: all 0.1s ease;
+}
+
+.assortmentContent:hover{
+	transform: scale(1.05);
+	font-weight: $rare-font-weight;
+}
+
+.aboutUs{
+	width: 310px;
+}
+
+.aboutUs h2{
+	margin-bottom: 18px;
+}
+
+.aboutUs p{
+	margin-bottom: 8px;
+	padding-left: 15px;
+}
+
+.aboutUsContent{
+	position: relative;
+}
+
+.aboutUsContent:before{
+	content: " ";
+	position: absolute;
+	top: 5px;
+	width: 20px;
+	height: 20px;
+	border-left: 1px solid $primary-color-button;
+}
+
+.wrapperAboutUsPromotion{
+	padding-top: 66px;
+}
+
+.aboutUsPromotion{
+	width: 350px;
+	height: 270px;
+	position: relative;
+	margin-right: -65px;
+	background: url("images/abstract_background.png") no-repeat;
+	background-size: cover;
+	background-position: 30px;
+}
+
+.aboutUsPromotionImage{
+	width: 300px;
+	height: 180px;
+	position: absolute;
+	top: 15px;
+	left: -3px;
+}
+
+.wrapperSocialNetwork{
+	position: absolute;
+	top: 40px;
+	right: 15px;
+	@extend %flex-center;
+}
+
+.wrapperSocialNetwork ul{
+	@extend %flex-column;
+	align-items: center;
+}
+
+.instagramIcon, .facebookIcon{
+	display: block;
+	width: 22px;
+	height: 22px;
+	margin: 7px;
+}
+
+.viberIcon{
+	display: block;
+	width: 27px;
+	height: 27px;
+	margin: 7px;
+}
+
+.banner{
+	background: $primary-color-banner-comments;
+	margin-top: -75px;
+	position: relative;
+	z-index: 1;
+}
+
+.banner h4{
+	padding: 10px 0 8px;
+}
+
+.wrapperBannerItem{
+	display: flex;
+	justify-content: space-around;
+}
+
+.bannerImage{
+	width: 55px;
+}
+
+.bannerContent{
+	width: 150px;
+	margin: 10px 0;
+}
+
+.bannerContent p{
+	@include font-size($rare-text-size, $rare-line-height, $primary-font-weight);
+	text-align: center;
+}
+
+.directory h2{
+	padding: 47px 0 24px;
+}
+
+.cardList{
+	display: grid;
+	grid-template-columns: repeat(3, 200px);
+	grid-column-gap: 15px;
+	grid-row-gap: 20px;
+	padding-bottom: 15px;
+}
+
+.card{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 11px;
+	box-shadow: 0px 4px 8px $primary-color-button;
+}
+
+.card:hover{
+	box-shadow: 0px 4px 8px $box-shadow-color;
+	transform: scale(1.05);
+}
+
+.card p{
+	padding: 15px 0;
+}
+
+.cardImage{
+	margin-bottom: 8px;
+}
+
+.wrapperPagination{
+	@extend %flex-center;
+	padding-bottom: 30px;
+}
+
+.pagination{
+	@extend %flex-center;
+	width: 155px;
+	padding: 10px 0;
+}
+
+.pagination img{
+	width: 35px;
+	height: 10px;
+	margin: 0 3px;
+}
+
+.paginationButton{
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: $color-pagination;
+	margin: 0 3px;
+}
+
+.comments{
+	background: $primary-color-banner-comments;
+}
+
+.comments .container{
+	padding-bottom: 35px;
+	position: relative;
+}
+
+.comments .container h2{
+	padding: 24px 0;
+}
+
+.comments .container h3{
+	padding: 15px 0;
+}
+
+.visibleComment{
+	display: flex;
+	position: relative;
+}
+
+.visibleComment img{
+	width: 100px;
+	margin-right: 47px;
+}
+
+.commentContent{
+	width: 334px;
+}
+
+.commentContent:before{
+	content: " ";
+	position: absolute;
+	bottom: 22px;
+	width: 20px;
+	height: 20px;
+	border-bottom: 1px solid $primary-color-button;
+}
+
+.commentContent p{
+	margin-bottom: 14px;
+}
+
+.commentContent span{
+	font-family: $additional-font-family;
+	@include font-size($additional-text-size, $additional-line-height, $rare-font-weight);
+	color: $rare-text-color;
+}
+
+.visibleCommentUser2{
+	margin: 45px 0 17px 147px;
+}
+
+.userName{
+	margin-bottom: 12px;
+}
+
+.pensilFlower1{
+	width: 160px;
+	height: 160px;
+	position: absolute;
+	top: -40px;
+	right: 0;
+	background: url("images/flowers 1.png") no-repeat;
+}
+
+.pensilFlower2{
+	width: 300px;
+	height: 300px;
+	position: absolute;
+	top: 200px;
+	left: 0px;
+	background: url("images/flowers 2.png") no-repeat;
+}
+
+.wrapperBuingProcess{
+	position: relative;
+	padding: 44px 0 24px;
+}
+
+.buingProcessHeader{
+	padding-bottom: 30px; 
+}
+
+.buingProcess{
+	@extend %flex-between;
+	flex-wrap: wrap;
+	padding-bottom: 15px;
+}
+
+.buingProcessItem{
+	width: 200px;
+	@extend %flex-column;
+	align-items: center;
+	padding-bottom: 30px;
+}
+
+.buingProcessItem div{
+	width: 65px;
+	height: 65px;
+	@extend %flex-center;
+	box-shadow: 0px 4px 8px $primary-color-button;
+	border-radius: 50%;
+	margin-bottom: 15px;
+}
+
+.buingProcessItem div span{
+	font-size: 40px;
+	line-height: 51px;
+	color: $primary-color-header-footer;
+}
+
+.buingProcessItem p{
+	@include font-size($additional-text-size, $additional-line-height, $primary-font-weight);
+	text-align: center;
+}
+
+.wrapperPensilFlower3{
+	width: 150px;
+	height: 170px;
+	position: absolute;
+	bottom: -55px;
+	right: -65px;
+	overflow: hidden;
+}
+
+.pensilFlower3{
+	width: 145px;
+	height: 180px;
+	position: absolute;
+	top: -8px;
+	left: 28px;
+	transform: rotate(305deg);
+	background: url("images/flowers 3.png") no-repeat;
+	background-size: cover;
+	background-position: 0 5px;
+}

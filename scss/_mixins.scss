@@ -1,0 +1,9 @@
+@mixin font-size($size, $height, $weight){
+	font-size: $size;
+	line-height: $height;
+	font-weight: $weight;
+}
+
+@mixin border($border-weight, $color){
+	border: $border-weight solid $color; 
+}

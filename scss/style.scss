@@ -1,0 +1,385 @@
+@import "base";
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	height: 100%;
+	background: $primary-color;
+	font-family: $primary-font-family, $additional-font-family, $rare-font-family;
+	color: $primary-text-color;
+	@include font-size($primary-text-size, $primary-line-height, $primary-font-weight);
+	@extend %flex-column;
+}
+
+header,
+footer{
+	background: $primary-color-header-footer;
+}
+
+main{
+	flex-grow: 1;
+}
+
+h2{
+	@include font-size($text-size-h2, $line-height-h2, $primary-font-weight);
+}
+
+h3{
+	@include font-size($text-size-h3, $line-height-h3, $primary-font-weight);
+}
+
+h4{
+	@include font-size($text-size-h4, $line-height-h4, $primary-font-weight);
+	color: $rare-text-color;
+}
+
+h5{
+	@include font-size($primary-text-size, $primary-line-height, $primary-font-weight);
+}
+
+input, textarea{
+	font-family: $additional-font-family;
+	@include font-size($additional-text-size, $additional-line-height, $primary-font-weight);
+	width: 630px;
+	background: $primary-color;
+	border: none;
+	border-radius: 10px;
+	padding: 5px 12px;
+}
+
+textarea{
+	height: 94px;
+	margin-bottom: 15px;
+	resize: none;
+}
+
+input:focus, textarea:focus{
+	outline: none !important;
+}
+
+p{
+	font-family: $additional-font-family;
+}
+
+ul{
+	display: flex;
+	list-style-type: none;
+}
+
+a{
+	cursor: pointer;
+	color: $additional-text-color;
+	text-decoration: none;
+}
+
+img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+button{
+	width: 130px;
+	font-family: $additional-font-family;
+	@include font-size($additional-text-size, $additional-line-height, $primary-font-weight);
+	cursor: pointer;
+	padding: 7px 0;
+	text-align: center;
+	border-radius: 50px;
+	@include border($additional-border-weight, $primary-color-button);
+}
+
+button:hover{
+	@include border($additional-border-weight, $primary-color-header-footer);
+}
+
+.container{
+	width: 760px;
+	margin: 0 auto;
+	padding: 0 65px;
+}
+
+.space{
+	@extend %flex-between;
+}
+
+.wrapperLogoFooter{
+	@extend %flex-center;
+}
+
+.logoFooter{
+	width: 137px;
+}
+
+.footerContent{
+	@extend %flex-between;
+	font-family: $additional-font-family;
+	@include font-size($rare-text-size, $rare-line-height, $additional-font-weight);
+	color: $additional-text-color;
+	padding-bottom: 15px;
+}
+
+@media only screen and (max-width: 780px){
+	input, textarea{
+		width: 620px;
+	}
+
+	.container{
+		width: 680px;
+		padding: 0 30px;
+	}
+
+	.wrapperRoundaboutBouquet{
+		width: 383px;
+		margin: 20px -30px 20px 0;
+	}
+
+	.roundaboutBouquet{
+		left: 77px;
+	}
+
+	.aboutUsPromotion{
+		margin-right: -30px;
+	}
+
+	.cardList{
+		grid-template-columns: repeat(3, 194px);
+		grid-column-gap: 17px;
+	}
+
+	.wrapperPensilFlower3{
+		right: -30px;
+	}
+
+	.navFooterItem{
+		width: 115px;
+	}
+}
+
+@media only screen and (max-width: 700px){
+	input, textarea{
+		width: 420px;
+	}
+
+	.container{
+		width: 450px;
+		padding: 0 15px;
+	}
+
+	.space{
+		flex-wrap: wrap;
+	}
+
+	.navHeader{
+		display: block;
+		position: fixed;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 0;
+		height: 100%;
+		transition: all 0.3s ease;
+		color: #000;
+		background: $primary-color-header-footer;
+		margin: 0;
+	}
+
+	.navHeader.open{
+		display: block;
+		position: fixed;
+		width: 160px;
+		transition: all 0.5s ease;
+		z-index: 10;
+	}
+
+	.navHeader ul{
+		display: flex;
+		flex-direction: column;
+		opacity: 0;
+	}
+
+	.navHeader.open ul{
+		opacity: 1;
+		transition: all 0.5s ease 0.2s; 
+	}
+
+	.navHeader ul li{
+		padding:  15px 0 0 20px;
+	}
+
+	.navHeader .burgerClosed{
+		opacity: 0;
+	}
+
+	.navHeader.open .burgerClosed{
+		opacity: 1;
+		transition: all 0.5s ease 0.2s;
+	}
+
+	.burger,
+	.burgerClosed{
+		display: block;
+	}
+
+	.selectionBouquet{
+		width: 300px;
+		margin: 55px auto 0 auto;
+	}
+
+	.wrapperRoundaboutBouquet{
+		width: 383px;
+		margin: 30px -15px 30px 50px;
+	}
+
+	.assortment{
+		width: 300px;
+		margin: 10px auto ;
+	}
+
+	.assortmentContent{
+		left: 70px;
+	}
+
+	.aboutUs{
+		width: 300px;
+		margin: 10px auto;
+	}
+
+	.wrapperAboutUsPromotion{
+		padding-top: 16px;
+	}
+
+	.aboutUsPromotion{
+		margin: 0 -15px 0 84px;
+	}
+
+	.banner h4{
+		padding: 35px 0 8px;
+	}
+
+	.cardList{
+		grid-template-columns: repeat(2, 200px);
+		grid-column-gap: 18px;
+	}
+
+	.visibleComment img{
+		margin-right: 15px;
+	}
+
+	.visibleCommentUser2{
+		margin: 80px 0 17px 114px;
+	}
+
+	.wrapperPensilFlower3{
+		right: -15px;
+		bottom: -65px;
+	}
+
+	.footerContent{
+		flex-wrap: wrap;
+		gap: 15px;
+	}
+
+	.navFooterItem{
+		width: 120px;
+	}
+}
+
+@media only screen and (max-width: 470px){
+	input, textarea{
+		width: 280px;
+	}
+
+	.container{
+		width: 300px;
+		padding: 0 10px;
+	}
+
+	.wrapperRoundaboutBouquet{
+		width: 300px;
+		margin: 20px -10px 20px -10px;
+	}
+
+	.roundaboutBouquet{
+		width: 420px;
+	}
+
+	.paginationOne,
+	.paginationThree{
+		left: 40px;
+	}
+
+	.aboutUsPromotion{
+		width: 313px;
+		height: 253px;
+		margin: 0 -10px 0 -24px;
+	}
+
+	.aboutUsPromotionImage{
+		width: 280px;
+		height: 162px;
+		top: 24px;
+	}
+
+	.banner{
+		margin-top: -68px;
+	}
+
+	.bannerContent{
+		margin: 10px 1px;
+	}
+
+	.directory h2{
+		padding: 20px 0 24px;
+	}
+
+	.cardList{
+		grid-template-columns: repeat(1, 250px);
+		justify-content: center;
+	}
+
+	.comments .container h2{
+		padding: 43px 0;
+	}
+
+	.visibleCommentUser2{
+		display: none;
+	}
+
+	.pensilFlower2{
+		display: none;
+	}
+
+	.comments .wrapperPagination{
+		padding: 10px 0;
+	}
+
+	.wrapperPensilFlower3{
+		right: -10px;
+	}
+
+	.buingProcessItem{
+		width: 140px;
+	}
+
+	.navFooter ul{
+		flex-wrap: wrap;
+		row-gap: 20px;
+	}
+
+	.navFooterItem{
+		width: 128px;
+	}
+}
+
+
+
+
+
+
+

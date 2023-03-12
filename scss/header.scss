@@ -1,0 +1,83 @@
+.logo{
+	width: 137px;
+	height: 55px;
+	margin: 8px 0;
+}
+
+.navHeader a{
+	margin-right: 20px;
+}
+
+.navHeader a:hover{
+	border-bottom: 1px solid $primary-color;
+	font-weight: $rare-font-weight;
+}
+
+.searchAndBasket{
+	display: flex;
+	margin: 30px 0 0;
+}
+
+.searchAndBasket a{
+	margin-left: 15px;
+	display: block;
+	width: 20px;
+	height: 20px;
+}
+
+.burger,
+.burgerClosed{
+	width: 26px;
+	height: 26px;
+	cursor: pointer;
+	display: none;
+}
+
+.burger{
+	margin: 10px 0 0 15px;
+}
+
+.burger > span,
+.burger > span:before,
+.burger > span:after{
+	display: block;
+	position: absolute;
+	width: 26px;
+	height: 2px;
+	background: #fff;
+}
+
+.burger > span:before{
+	content: '';
+	top: -8px;
+}
+
+.burger > span:after{
+	content: '';
+	top: 8px;
+}
+
+.wrapperBurgerClosed{
+	height: 36px;
+	display: flex;
+	justify-content: flex-end;
+	padding: 10px 10px 0 0;
+}
+.burgerClosed > span,
+.burgerClosed > span:before{
+	display: block;
+	position: absolute;
+	width: 26px;
+	height: 2px;
+	background: #fff;
+}
+
+.burgerClosed > span{
+	transform: rotate(45deg);
+	top: 20px;
+}
+
+.burgerClosed > span:before{
+	content: '';
+	transform: rotate(270deg);
+}
